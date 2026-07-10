@@ -3,6 +3,7 @@ import Hero from './components/Hero.jsx'
 import Problem from './components/Problem.jsx'
 import Features from './components/Features.jsx'
 import Setup from './components/Setup.jsx'
+import Connect from './components/Connect.jsx'
 import Download from './components/Download.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -15,6 +16,7 @@ function App() {
         <Problem />
         <Features />
         <Setup />
+        <Connect />
         <Download />
       </main>
       <Footer />

@@ -9,14 +9,26 @@ const STEPS = [
       <>
         If you want approvals to keep working when your phone is on mobile data,
         not just the same Wi-Fi as your PC, install Tailscale on both. It is free
-        for personal use. Skip this if you only ever need approvals while your
-        phone and PC share a network.
+        for personal use. See the Connect section below for the full setup steps.
+        Skip this if you only ever need approvals while your phone and PC share a
+        network.
       </>
     ),
   },
   {
     title: 'Run the installer on your PC',
-    body: 'Run AethelHook-Setup.exe as Administrator. It installs a background service and a tray app, then launches the tray app automatically.',
+    body: 'Run AethelHook-Setup.exe as Administrator. It installs a background service and the tray app, then opens the tray app automatically.',
+  },
+  {
+    title: 'Find the AethelHook tray app',
+    body: (
+      <>
+        Look for the ÆthelHook icon in your Windows system tray, the row of small
+        icons near the clock in the bottom right of your screen. If you do not see
+        it right away, click the small up arrow (^) to show hidden icons. Left
+        click the icon to open the app.
+      </>
+    ),
   },
   {
     title: 'Install the app on your phone',
@@ -26,9 +38,10 @@ const STEPS = [
     title: 'Pair your phone with your PC',
     body: (
       <>
-        On your PC, open{' '}
-        <code>http://localhost:5266/pair</code> in a browser. Open the app on your
-        phone and scan the QR code shown on that page.
+        In the tray app window, click <strong>Pair New Device</strong>. It shows a
+        QR code. Open the app on your phone, go to <strong>Settings</strong>, and
+        tap <strong>Scan QR to Pair</strong>, then scan the code from the tray
+        window.
       </>
     ),
   },
@@ -43,7 +56,7 @@ export default function Setup() {
     <section id="setup">
       <div className="wrap">
         <h2>Setup</h2>
-        <p className="section-lead">Six steps, most of them one click.</p>
+        <p className="section-lead">Seven steps, most of them one click.</p>
         <ol className="steps">
           {STEPS.map((s, i) => (
             <li className="step" key={s.title}>

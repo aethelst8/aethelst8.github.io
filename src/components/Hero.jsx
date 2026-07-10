@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="wrap">
-        <span className="badge">Free and open source, MIT licensed</span>
+        <span className="badge">Free and open source</span>
         <h1>Your AI coding agent can run any command it wants, right now.</h1>
         <p className="lead">
           One click through a permission dialog you stopped reading, and it just did

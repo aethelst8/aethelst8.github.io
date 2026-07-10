@@ -11,6 +11,7 @@ export default function Nav() {
         <nav className="links">
           <a href="#features">Features</a>
           <a href="#setup">Setup</a>
+          <a href="#connect">Connect</a>
           <a href="#download">Download</a>
           <a
             className="icon-link"

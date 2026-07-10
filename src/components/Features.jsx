@@ -23,6 +23,14 @@ const FEATURES = [
     title: 'Secure by default',
     body: 'Devices pair over a one time QR code. Every device gets its own token, and nothing is stored in plain text.',
   },
+  {
+    title: 'Stay connected on the go',
+    body: 'Works over the same Wi-Fi, or over Tailscale when your phone is on mobile data and your PC is somewhere else entirely. Leaving your desk does not mean losing control of your agent.',
+  },
+  {
+    title: 'Fewer trips back to your IDE',
+    body: 'Approve, deny, or answer a question straight from a phone notification. No alt-tabbing away from whatever else you are working on just to click a button.',
+  },
 ]
 
 export default function Features() {

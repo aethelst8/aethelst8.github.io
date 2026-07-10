@@ -182,7 +182,7 @@ section p.section-lead {
   border-bottom: 1px solid var(--card-border);
 }
 .problem .wrap {
-  max-width: 720px;
+  max-width: 960px;
   text-align: center;
 }
 .problem p {
@@ -192,6 +192,41 @@ section p.section-lead {
 }
 .problem strong {
   color: var(--text);
+}
+.problem-lead {
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+.problem-lead:last-of-type {
+  margin-bottom: 40px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+.highlight {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+.highlight h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+.highlight p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 20px;
+  margin: 48px 0 28px;
 }
 
 .grid {
