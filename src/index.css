@@ -105,6 +105,12 @@ nav.links > a:hover {
   padding: 6px 14px;
   margin-bottom: 24px;
 }
+.eyebrow {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin: -12px 0 18px;
+}
 h1 {
   font-size: 44px;
   line-height: 1.15;

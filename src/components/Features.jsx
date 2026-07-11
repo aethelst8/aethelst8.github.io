@@ -17,7 +17,7 @@ const FEATURES = [
   },
   {
     title: 'Session Access',
-    body: 'Send a prompt from your phone and kick off a headless run on your PC. Each project keeps its own resumable conversation.',
+    body: 'Remote control your agent: send a prompt from your phone and kick off a headless run on your PC. Each project keeps its own resumable conversation.',
   },
   {
     title: 'Secure by default',
@@ -46,7 +46,7 @@ export default function Features() {
     <section id="features">
       <div className="wrap">
         <h2>What it does</h2>
-        <p className="section-lead">One gateway, two IDEs, and a phone in your pocket.</p>
+        <p className="section-lead">Remote control and approval for Claude Code and Codex, one gateway, two IDEs, and a phone in your pocket.</p>
         <div className="grid">
           {FEATURES.map((f) => (
             <div className="card" key={f.title}>

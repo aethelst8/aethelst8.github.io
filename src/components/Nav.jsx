@@ -5,7 +5,7 @@ export default function Nav() {
     <header className="nav">
       <div className="wrap nav-inner">
         <a className="brand" href="#top">
-          <img src="/ae_black_sqr.jpeg" alt="ÆthelHook logo" />
+          <img src="/nav-icon.png" alt="ÆthelHook logo" />
           ÆthelHook
         </a>
         <nav className="links">
