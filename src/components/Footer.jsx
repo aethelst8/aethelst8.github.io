@@ -6,6 +6,7 @@ export default function Footer() {
       <div className="wrap footer-inner">
         <div className="footer-copy">
           <p>2026 ÆthelSt8</p>
+          <p className="footer-aka">Also written AethelHook, aethelst8, or aethelstate.</p>
         </div>
         <div className="footer-links">
           <a className="icon-link" href="https://github.com/aethelst8/aethelhook">
