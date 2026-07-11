@@ -482,3 +482,124 @@ footer {
     display: none;
   }
 }
+
+/* Guides / articles */
+.guides-hero {
+  padding: 56px 0 8px;
+}
+.guides-hero h1 {
+  font-size: 36px;
+}
+.guide-list {
+  display: grid;
+  gap: 20px;
+  padding: 32px 0 72px;
+}
+.guide-card {
+  display: block;
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.guide-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.guide-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.guide-card p {
+  margin: 0;
+  color: var(--text-dim);
+}
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+.article .kicker {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.article h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+.article .article-lead {
+  font-size: 19px;
+  color: var(--text-dim);
+  margin-bottom: 36px;
+}
+.article h2 {
+  font-size: 26px;
+  margin: 44px 0 16px;
+}
+.article h3 {
+  font-size: 19px;
+  margin: 28px 0 10px;
+}
+.article p,
+.article li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.article ul,
+.article ol {
+  padding-left: 22px;
+}
+.article li {
+  margin-bottom: 8px;
+}
+.article a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 140, 255, 0.4);
+}
+.article a:hover {
+  text-decoration-color: var(--accent);
+}
+.article code {
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+}
+.article pre {
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+.article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.article .callout {
+  background: var(--info-bg);
+  border: 1px solid var(--info-border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+.article .related {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--card-border);
+}
+.article .related h2 {
+  margin-top: 0;
+}
+.article .related ul {
+  list-style: none;
+  padding-left: 0;
+}

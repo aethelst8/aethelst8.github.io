@@ -14,6 +14,7 @@ export default function Footer() {
           </a>
           <a href="https://github.com/aethelst8/aethelhook/blob/main/SECURITY.md">Security</a>
           <a href="https://github.com/aethelst8/aethelhook#readme">Docs</a>
+          <a href="/guides/">Guides</a>
         </div>
       </div>
     </footer>
