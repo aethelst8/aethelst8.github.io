@@ -24,8 +24,16 @@ const FEATURES = [
     body: 'Devices pair over a one time QR code. Every device gets its own token, and nothing is stored in plain text.',
   },
   {
+    title: 'Hidden until you unlock them',
+    body: 'Your LAN IP, Tailscale IP, and API token are masked in the app by default. Reveal them with your fingerprint, face, PIN, or password.',
+  },
+  {
     title: 'Stay connected on the go',
     body: 'Works over the same Wi-Fi, or over Tailscale when your phone is on mobile data and your PC is somewhere else entirely. Leaving your desk does not mean losing control of your agent.',
+  },
+  {
+    title: 'Reconnects on its own',
+    body: 'The background service starts automatically when your PC boots, and keeps running through sleep and wake. Your phone finds it again on its own, over the same Wi-Fi or over Tailscale, no need to reopen anything.',
   },
   {
     title: 'Fewer trips back to your IDE',

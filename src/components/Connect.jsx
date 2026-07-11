@@ -19,6 +19,14 @@ export default function Connect() {
       <div className="wrap">
         <h2>Staying connected</h2>
         <p className="section-lead">Three ways your phone and PC can reach each other.</p>
+        <div className="warn warn-info requirements-note">
+          <strong>Both sides need to be reachable.</strong> Your PC has to be powered
+          on, awake, and running the AethelHook service, if it is shut down, asleep,
+          or the service is not running, there is nothing for your phone to connect
+          to. You will also need an internet connection to use AethelHook and to
+          reach Claude Code or Codex: your phone can be on mobile data, or on a Wi-Fi
+          network with internet access.
+        </div>
         <div className="grid">
           {SCENARIOS.map((s) => (
             <div className="card" key={s.title}>

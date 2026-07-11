@@ -5,8 +5,7 @@ export default function Footer() {
     <footer>
       <div className="wrap footer-inner">
         <div className="footer-copy">
-          <p>Copyright © 2026 ÆthelSt8</p>
-          <p>All rights reserved</p>
+          <p>2026 ÆthelSt8</p>
         </div>
         <div className="footer-links">
           <a className="icon-link" href="https://github.com/aethelst8/aethelhook">

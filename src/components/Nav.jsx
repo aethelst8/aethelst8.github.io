@@ -10,8 +10,10 @@ export default function Nav() {
         </a>
         <nav className="links">
           <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
           <a href="#setup">Setup</a>
           <a href="#connect">Connect</a>
+          <a href="#troubleshooting">Help</a>
           <a href="#download">Download</a>
           <a
             className="icon-link"
