@@ -1,7 +1,7 @@
 const FEATURES = [
   {
     title: 'Works with Claude Code and Codex',
-    body: 'Each IDE is wired in through its own native hook mechanism, both routed through the same approval gateway.',
+    body: 'The Claude Code CLI and its VS Code extension, plus the Codex CLI and IDE. Not the regular Claude app or claude.ai, those are a different product.',
   },
   {
     title: 'Real time, end to end encrypted',

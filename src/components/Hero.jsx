@@ -14,6 +14,10 @@ export default function Hero() {
           <a className="btn btn-primary" href="#download">Download ÆthelHook</a>
         </div>
         <p className="fine-print">Windows PC and Android phone required. No account, no subscription.</p>
+        <p className="fine-print">
+          Works with Claude Code (CLI and VS Code extension) and Codex (CLI and IDE).
+          Not the Claude app or claude.ai.
+        </p>
       </div>
     </section>
   )
