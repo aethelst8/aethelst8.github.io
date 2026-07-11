@@ -359,7 +359,8 @@ section p.section-lead {
 /* Demo section */
 .demo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  justify-content: center;
   gap: 20px;
 }
 .demo-card {
@@ -396,16 +397,6 @@ section p.section-lead {
   object-fit: contain;
   display: block;
 }
-.demo-placeholder {
-  border-style: dashed;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 220px;
-  color: var(--text-dim);
-  font-size: 13px;
-}
-
 /* Troubleshooting commands */
 .cmd-grid {
   display: grid;
