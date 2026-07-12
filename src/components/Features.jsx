@@ -21,7 +21,7 @@ const FEATURES = [
   },
   {
     title: 'Secure by default',
-    body: 'Devices pair over a one time QR code. Every device gets its own token, and nothing is stored in plain text.',
+    body: 'Pairing a new device needs Windows Hello on the PC, not just a QR scan. Every device gets its own token, only one is ever active, and nothing is stored in plain text.',
   },
   {
     title: 'Hidden until you unlock them',

@@ -38,10 +38,10 @@ const STEPS = [
     title: 'Pair your phone with your PC',
     body: (
       <>
-        In the tray app window, click <strong>Pair New Device</strong>. It shows a
-        QR code. Open the app on your phone, go to <strong>Settings</strong>, and
-        tap <strong>Scan QR to Pair</strong>, then scan the code from the tray
-        window.
+        In the tray app window, click <strong>Pair New Device</strong>. Windows Hello
+        asks you to confirm with your PIN, fingerprint, or face, then shows a QR code.
+        Open the app on your phone, go to <strong>Settings</strong>, and tap{' '}
+        <strong>Scan QR to Pair</strong>, then scan the code from the tray window.
       </>
     ),
   },

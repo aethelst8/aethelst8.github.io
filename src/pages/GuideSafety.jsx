@@ -121,7 +121,10 @@ export default function GuideSafety() {
             for a decision, over an end-to-end encrypted connection, with no cloud
             relay in the middle. It does not replace the safeguards above, it adds
             the one thing they cannot: a decision made away from the screen you were
-            already on autopilot with.
+            already on autopilot with. The gate itself is guarded too, pairing a new
+            phone requires Windows Hello on the PC, so the second device the decision
+            gets moved to cannot be added by anyone who merely has your Wi-Fi
+            password.
           </p>
           <p>
             <a href="/">See how it works and download it</a>.

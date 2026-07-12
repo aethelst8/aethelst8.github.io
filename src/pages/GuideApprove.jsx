@@ -51,12 +51,21 @@ export default function GuideApprove() {
 
           <h2>4. Pair your phone with your PC</h2>
           <p>
-            In the tray app window, click <strong>Pair New Device</strong>. It shows
-            a QR code. Open the app on your phone, go to <strong>Settings</strong>,
-            and tap <strong>Scan QR to Pair</strong>, then scan the code from the
-            tray window. Pairing is a one-time QR handshake, each device gets its own
-            token, and the connection is end-to-end encrypted with certificate
-            pinning, not a shared cloud relay.
+            In the tray app window, click <strong>Pair New Device</strong>. Windows
+            Hello asks you to confirm with your PIN, fingerprint, or face before it
+            shows a QR code, so pairing a new device takes more than just a scan.
+            Open the app on your phone, go to <strong>Settings</strong>, and tap{' '}
+            <strong>Scan QR to Pair</strong>, then scan the code from the tray
+            window. Each device gets its own token, and the connection is end-to-end
+            encrypted with certificate pinning, not a shared cloud relay.
+          </p>
+          <p>
+            Only one phone is ever the active connection. Pairing a new device makes
+            it the sole active one, whichever phone was previously connected gets a
+            plain notification that its connection ended, no approval prompt on that
+            phone, since the decision already happened on the PC via Windows Hello. If
+            Windows Hello is not set up on your PC at all, pairing still works, just
+            without that extra confirmation step.
           </p>
 
           <h2>5. Optional: install Tailscale for mobile data</h2>

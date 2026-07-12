@@ -4,6 +4,7 @@ import Problem from './components/Problem.jsx'
 import Features from './components/Features.jsx'
 import Demo from './components/Demo.jsx'
 import Setup from './components/Setup.jsx'
+import PairingSecurity from './components/PairingSecurity.jsx'
 import Connect from './components/Connect.jsx'
 import Troubleshooting from './components/Troubleshooting.jsx'
 import Download from './components/Download.jsx'
@@ -19,6 +20,7 @@ function App() {
         <Features />
         <Demo />
         <Setup />
+        <PairingSecurity />
         <Connect />
         <Troubleshooting />
         <Download />
