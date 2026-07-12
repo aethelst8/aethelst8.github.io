@@ -8,7 +8,30 @@ export default function Footer() {
     <footer>
       <div className="wrap footer-inner">
         <div className="footer-copy">
-          <p>2026 ÆthelSt8</p>
+          <p className="footer-brand-row">
+            2026 ÆthelSt8
+            <a
+              className="icon-link"
+              href="https://www.reddit.com/user/aethelst8/"
+              aria-label="aethelst8 on Reddit"
+            >
+              <RedditIcon size={14} />
+            </a>
+            <a
+              className="icon-link"
+              href="http://www.youtube.com/@aethelst8"
+              aria-label="aethelst8 on YouTube"
+            >
+              <YoutubeIcon size={14} />
+            </a>
+            <a
+              className="icon-link"
+              href="https://www.producthunt.com/@aethelst8"
+              aria-label="aethelst8 on Product Hunt"
+            >
+              <ProductHuntIcon size={14} />
+            </a>
+          </p>
           <p className="footer-aka">Also written AethelHook, aethelst8, or aethelstate.</p>
         </div>
         <div className="footer-links">
@@ -20,27 +43,6 @@ export default function Footer() {
           <a href="https://github.com/aethelst8/aethelhook#readme">Docs</a>
           <a href="/guides/">Guides</a>
           <a href="/privacy/">Privacy</a>
-          <a
-            className="icon-link"
-            href="https://www.reddit.com/user/aethelst8/"
-            aria-label="aethelst8 on Reddit"
-          >
-            <RedditIcon size={16} />
-          </a>
-          <a
-            className="icon-link"
-            href="http://www.youtube.com/@aethelst8"
-            aria-label="aethelst8 on YouTube"
-          >
-            <YoutubeIcon size={16} />
-          </a>
-          <a
-            className="icon-link"
-            href="https://www.producthunt.com/@aethelst8"
-            aria-label="aethelst8 on Product Hunt"
-          >
-            <ProductHuntIcon size={16} />
-          </a>
         </div>
       </div>
     </footer>

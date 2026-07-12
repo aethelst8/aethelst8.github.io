@@ -473,6 +473,11 @@ footer {
 .footer-copy p {
   margin: 0 0 2px;
 }
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .footer-aka {
   color: var(--text-dim);
   font-size: 12px;
