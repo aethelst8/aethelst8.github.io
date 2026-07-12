@@ -403,6 +403,24 @@ section p.section-lead {
   object-fit: contain;
   display: block;
 }
+.media-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+/* YouTube embeds size by aspect-ratio instead of the fixed max-height above,
+   since a portrait Short needs to render tall, not letterboxed into a wide box. */
+.media-frame--landscape {
+  max-height: none;
+  aspect-ratio: 16 / 9;
+}
+.media-frame--portrait {
+  max-height: none;
+  aspect-ratio: 9 / 16;
+  max-width: 320px;
+  margin: 0 auto;
+}
 /* Troubleshooting commands */
 .cmd-grid {
   display: grid;

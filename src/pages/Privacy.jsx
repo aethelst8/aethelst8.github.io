@@ -9,11 +9,7 @@ export default function Privacy() {
         <article className="article">
           <p className="kicker">Legal</p>
           <h1>Privacy Policy</h1>
-          <p className="article-lead">
-            Last updated: July 13, 2026. This page exists for transparency, not
-            because AethelHook collects much of anything. Here is exactly what
-            happens to your data.
-          </p>
+          <p className="article-lead">Last updated: July 13, 2026.</p>
 
           <div className="callout">
             <strong>The short version:</strong> AethelHook has no accounts, no
