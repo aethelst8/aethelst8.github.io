@@ -33,7 +33,7 @@ export default function Download() {
             <p className="dl-sub">Sideloaded APK, not on the Play Store yet.</p>
             <a
               className="btn btn-primary"
-              href="https://github.com/aethelst8/aethelhook/releases/download/v1.0.1/aethelhook_v1.0.1.apk"
+              href="https://github.com/aethelst8/aethelhook/releases/download/v1.0.2/aethelhook_v1.0.2.apk"
             >
               Download for Android
             </a>
