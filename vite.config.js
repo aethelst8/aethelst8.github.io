@@ -13,6 +13,7 @@ export default defineConfig({
         guideSafety: resolve(__dirname, 'guides/is-it-safe-to-let-claude-code-run-unattended/index.html'),
         guideApprove: resolve(__dirname, 'guides/approve-claude-code-and-codex-from-your-phone/index.html'),
         guideHooks: resolve(__dirname, 'guides/claude-code-hooks-explained/index.html'),
+        privacy: resolve(__dirname, 'privacy/index.html'),
       },
     },
   },

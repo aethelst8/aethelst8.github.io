@@ -14,6 +14,7 @@ const TARGETS = [
   { html: 'guides/is-it-safe-to-let-claude-code-run-unattended/index.html', pageId: 'guide-safety' },
   { html: 'guides/approve-claude-code-and-codex-from-your-phone/index.html', pageId: 'guide-approve' },
   { html: 'guides/claude-code-hooks-explained/index.html', pageId: 'guide-hooks' },
+  { html: 'privacy/index.html', pageId: 'privacy' },
 ]
 
 for (const { html, pageId } of TARGETS) {
