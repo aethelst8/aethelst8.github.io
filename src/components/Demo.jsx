@@ -9,8 +9,8 @@ export default function Demo() {
             <h3>Phone dashboard</h3>
             <div className="media-frame">
               <img
-                src="/media/phone-dashboard.jpeg"
-                alt="AethelHook Android app dashboard showing gateway status, Claude Code and Codex toggles, and approval counts"
+                src="/media/mobile-app-dashboard.jpeg"
+                alt="AethelHook Android app dashboard showing gateway status, Claude Code, Codex, and OpenCode toggles, and approval counts"
               />
             </div>
             <p>The Dashboard tab: gateway status, per-IDE toggles, and a running approval count.</p>
