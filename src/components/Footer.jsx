@@ -2,6 +2,8 @@ import GithubIcon from './GithubIcon.jsx'
 import RedditIcon from './RedditIcon.jsx'
 import YoutubeIcon from './YoutubeIcon.jsx'
 import ProductHuntIcon from './ProductHuntIcon.jsx'
+import LinkedinIcon from './LinkedinIcon.jsx'
+import XIcon from './XIcon.jsx'
 
 export default function Footer() {
   return (
@@ -30,6 +32,20 @@ export default function Footer() {
               aria-label="aethelst8 on Product Hunt"
             >
               <ProductHuntIcon size={14} />
+            </a>
+            <a
+              className="icon-link"
+              href="https://www.linkedin.com/company/aethelst8/"
+              aria-label="aethelst8 on LinkedIn"
+            >
+              <LinkedinIcon size={14} />
+            </a>
+            <a
+              className="icon-link"
+              href="https://x.com/aethelst8"
+              aria-label="aethelst8 on X"
+            >
+              <XIcon size={14} />
             </a>
           </p>
           <p className="footer-aka">Also written AethelHook, aethelst8, or aethelstate.</p>
