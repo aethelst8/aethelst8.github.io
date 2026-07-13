@@ -47,7 +47,7 @@ const STEPS = [
   },
   {
     title: 'You are done',
-    body: 'From now on, tool calls, plan reviews, and clarifying questions from Claude Code, Codex, Antigravity, or OpenCode are routed to your phone for a decision.',
+    body: 'From now on, tool calls, plan reviews, and clarifying questions from Claude Code, Codex, or OpenCode are routed to your phone for a decision.',
   },
 ]
 
@@ -69,9 +69,9 @@ export default function Setup() {
           ))}
         </ol>
         <div className="warn warn-info requirements-note">
-          <strong>Codex, Antigravity, and OpenCode each need one extra one-time step</strong>{' '}
-          beyond what is listed above, Codex needs its hooks trusted, Antigravity needs
-          two IDE settings changed, and OpenCode needs Node.js. See the{' '}
+          <strong>Codex and OpenCode each need one extra one-time step</strong>{' '}
+          beyond what is listed above, Codex needs its hooks trusted, and OpenCode
+          needs Node.js. See the{' '}
           <a href="/guides/approve-claude-code-and-codex-from-your-phone/">full setup guide</a>{' '}
           for exact instructions for each.
         </div>

@@ -1,7 +1,7 @@
 const FEATURES = [
   {
-    title: 'Works with four coding agents',
-    body: 'Claude Code (CLI and VS Code extension), Codex (CLI and IDE), Antigravity, and OpenCode. Not the regular Claude app or claude.ai, those are a different product. Codex and OpenCode need a one-time extra setup step, see the setup guide below for exact instructions.',
+    title: 'Works with three coding agents',
+    body: 'Claude Code (CLI and VS Code extension), Codex (CLI and IDE), and OpenCode. Not the regular Claude app or claude.ai, those are a different product. Codex and OpenCode need a one-time extra setup step, see the setup guide below for exact instructions.',
   },
   {
     title: 'Real time, end to end encrypted',
@@ -17,7 +17,7 @@ const FEATURES = [
   },
   {
     title: 'Session Access',
-    body: 'Remote control your agent: send a prompt from your phone and kick off a headless run on your PC. Each project keeps its own resumable conversation. Claude Code, Codex, and OpenCode only, Antigravity does not have a headless mode to run this way.',
+    body: 'Remote control your agent: send a prompt from your phone and kick off a headless run on your PC. Each project keeps its own resumable conversation.',
   },
   {
     title: 'Secure by default',
@@ -46,7 +46,7 @@ export default function Features() {
     <section id="features">
       <div className="wrap">
         <h2>What it does</h2>
-        <p className="section-lead">Remote control and approval for four coding agents, one gateway, and a phone in your pocket.</p>
+        <p className="section-lead">Remote control and approval for three coding agents, one gateway, and a phone in your pocket.</p>
         <div className="grid">
           {FEATURES.map((f) => (
             <div className="card" key={f.title}>

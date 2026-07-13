@@ -9,8 +9,8 @@ const GUIDES = [
   },
   {
     href: '/guides/approve-claude-code-and-codex-from-your-phone/',
-    title: 'How to approve Claude Code, Codex, Antigravity, and OpenCode from your phone',
-    body: 'A step-by-step walkthrough of pairing ÆthelHook and answering approvals, plan reviews, and questions remotely, including the extra setup step each of the other three agents needs.',
+    title: 'How to approve Claude Code, Codex, and OpenCode from your phone',
+    body: 'A step-by-step walkthrough of pairing ÆthelHook and answering approvals, plan reviews, and questions remotely, including the extra setup step Codex and OpenCode each need.',
   },
   {
     href: '/guides/claude-code-hooks-explained/',
@@ -28,7 +28,7 @@ export default function GuidesIndex() {
           <div className="wrap">
             <h1>Guides</h1>
             <p className="section-lead">
-              Notes on AI agent safety, Claude Code, Codex, Antigravity, OpenCode, and how ÆthelHook is built.
+              Notes on AI agent safety, Claude Code, Codex, OpenCode, and how ÆthelHook is built.
             </p>
           </div>
         </section>
