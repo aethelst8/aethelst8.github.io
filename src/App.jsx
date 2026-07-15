@@ -7,6 +7,7 @@ import Setup from './components/Setup.jsx'
 import PairingSecurity from './components/PairingSecurity.jsx'
 import Connect from './components/Connect.jsx'
 import Troubleshooting from './components/Troubleshooting.jsx'
+import Reviews from './components/Reviews.jsx'
 import Download from './components/Download.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -23,6 +24,7 @@ function App() {
         <PairingSecurity />
         <Connect />
         <Troubleshooting />
+        <Reviews />
         <Download />
       </main>
       <Footer />

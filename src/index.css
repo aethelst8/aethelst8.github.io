@@ -421,6 +421,36 @@ section p.section-lead {
   max-width: 320px;
   margin: 0 auto;
 }
+/* User reviews */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+  justify-content: center;
+  gap: 20px;
+}
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 28px;
+  margin: 0;
+}
+.review-card blockquote {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.review-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
 /* Troubleshooting commands */
 .cmd-grid {
   display: grid;
