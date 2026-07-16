@@ -1,4 +1,5 @@
 import YoutubeIcon from './YoutubeIcon.jsx'
+import RedditIcon from './RedditIcon.jsx'
 
 const reviews = [
   {
@@ -6,6 +7,12 @@ const reviews = [
       "That QR code pairing with Windows Hello is a nice touch, actually makes the remote access feel secure instead of just open to anyone on the network.",
     source: 'YouTube comment',
     icon: YoutubeIcon,
+  },
+  {
+    quote:
+      "The Windows Hello and WinRT part sounds like it was almost harder than the original idea. Those are the kinds of implementation details people never see, but usually end up taking 80% of the development time. Respect for sticking with it.",
+    source: 'Reddit comment',
+    icon: RedditIcon,
   },
 ]
 
