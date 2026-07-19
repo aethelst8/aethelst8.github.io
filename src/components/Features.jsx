@@ -17,7 +17,7 @@ const FEATURES = [
   },
   {
     title: 'Session Access',
-    body: 'Remote control your agent: send a prompt from your phone and kick off a headless run on your PC. Each project keeps its own resumable conversation.',
+    body: 'Remote control your agent: send a prompt from your phone, by typing or by voice, and kick off a headless run on your PC. Each project keeps its own resumable conversation, with a live context-usage gauge per agent.',
   },
   {
     title: 'Secure by default',
