@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Stonehaven on Vaal, Redesign Concept</title>
+<style>
+  :root{
+    --ink:#1f2523;
+    --cream:#faf6ee;
+    --rose:#b5285a;
+    --rose-dark:#8f1d47;
+    --river:#1f4d4a;
+    --gold:#c9a24b;
+    --muted:#6b6f6d;
+    --card-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+  /* header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:18px 0;
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;}
+  header.scrolled{background:rgba(250,246,238,.96);box-shadow:0 2px 16px rgba(0,0,0,.08);padding:10px 0;backdrop-filter:blur(6px);}
+  .brand{display:flex;flex-direction:column;line-height:1.1;}
+  .brand .name{font-size:1.5rem;font-weight:700;letter-spacing:.3px;color:var(--rose);font-family:Georgia,'Times New Roman',serif;}
+  header.scrolled .brand .name{color:var(--rose-dark);}
+  .brand .tag{font-size:.72rem;color:var(--muted);letter-spacing:.5px;}
+  header:not(.scrolled) .brand .name, header:not(.scrolled) .brand .tag{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4);}
+
+  nav.primary{display:flex;gap:28px;align-items:center;}
+  nav.primary a{font-size:.92rem;font-weight:600;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4);position:relative;padding:4px 0;}
+  header.scrolled nav.primary a{color:var(--ink);text-shadow:none;}
+  nav.primary a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .25s ease;}
+  nav.primary a:hover::after{width:100%;}
+  .cta-btn{
+    background:var(--rose);color:#fff !important;padding:10px 20px;border-radius:30px;
+    font-weight:700;font-size:.88rem;text-shadow:none !important;box-shadow:0 4px 14px rgba(181,40,90,.35);
+  }
+  .cta-btn:hover{background:var(--rose-dark);}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:#fff;cursor:pointer;}
+  header.scrolled .menu-toggle{color:var(--ink);}
+
+  /* hero */
+  .hero{
+    position:relative;height:92vh;min-height:560px;
+    background:url('https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_6988-2-scaled.jpg') center/cover no-repeat;
+    display:flex;align-items:center;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,25,23,.55) 0%, rgba(20,25,23,.35) 45%, rgba(20,25,23,.75) 100%);
+  }
+  .hero-content{position:relative;z-index:2;color:#fff;max-width:640px;}
+  .hero-content .eyebrow{letter-spacing:3px;text-transform:uppercase;font-size:.78rem;color:var(--gold);font-weight:700;margin-bottom:14px;display:inline-block;}
+  .hero-content h1{font-family:Georgia,'Times New Roman',serif;font-size:3.4rem;line-height:1.08;margin-bottom:16px;}
+  .hero-content p{font-size:1.15rem;color:#eee;margin-bottom:30px;max-width:480px;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{padding:14px 28px;border-radius:30px;font-weight:700;font-size:.95rem;display:inline-block;transition:transform .2s ease, box-shadow .2s ease;}
+  .btn-primary{background:var(--rose);color:#fff;box-shadow:0 6px 20px rgba(181,40,90,.4);}
+  .btn-outline{border:2px solid rgba(255,255,255,.8);color:#fff;}
+  .btn:hover{transform:translateY(-2px);}
+
+  /* quick info strip */
+  .info-strip{
+    background:var(--river);color:#fff;
+  }
+  .info-strip .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;padding:14px 24px;font-size:.88rem;}
+  .info-strip .item{display:flex;align-items:center;gap:8px;}
+  .info-strip .icon{font-size:1.1rem;}
+  .info-strip a{font-weight:700;}
+
+  /* sections */
+  section{padding:90px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 56px;}
+  .section-head .eyebrow{color:var(--rose);text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:700;}
+  .section-head h2{font-family:Georgia,'Times New Roman',serif;font-size:2.4rem;margin:10px 0 14px;}
+  .section-head p{color:var(--muted);font-size:1.05rem;}
+
+  .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+  .offer-card{
+    background:var(--card-bg);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .offer-card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.12);}
+  .offer-card img{height:170px;object-fit:cover;width:100%;}
+  .offer-card .body{padding:22px;}
+  .offer-card h3{font-size:1.15rem;margin-bottom:8px;font-family:Georgia,'Times New Roman',serif;}
+  .offer-card p{color:var(--muted);font-size:.92rem;margin-bottom:14px;}
+  .offer-card .more{color:var(--rose);font-weight:700;font-size:.85rem;}
+
+  /* why choose us */
+  .why{background:var(--river);color:#fff;}
+  .why .section-head p{color:#d6e4e2;}
+  .why .section-head .eyebrow{color:var(--gold);}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+  .why-card{text-align:center;padding:10px;}
+  .why-card .ico{
+    width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.1);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.7rem;
+    border:1px solid rgba(255,255,255,.25);
+  }
+  .why-card h3{font-size:1.05rem;margin-bottom:8px;}
+  .why-card p{color:#cfe0de;font-size:.88rem;}
+
+  /* gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+  .gallery-grid a:nth-child(1){grid-column:span 2;grid-row:span 2;}
+  .gallery-grid img{transition:transform .4s ease;}
+  .gallery-grid a:hover img{transform:scale(1.05);}
+
+  /* testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .testi-card{background:var(--card-bg);border-radius:14px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.06);}
+  .testi-card .stars{color:var(--gold);font-size:1rem;margin-bottom:12px;}
+  .testi-card p.quote{font-style:italic;color:#3c413f;margin-bottom:16px;}
+  .testi-card .who{font-weight:700;font-size:.9rem;}
+  .testi-card .src{color:var(--muted);font-size:.8rem;}
+
+  /* cta banner */
+  .cta-banner{
+    background:linear-gradient(120deg, var(--rose) 0%, var(--rose-dark) 100%);
+    color:#fff;text-align:center;padding:70px 24px;
+  }
+  .cta-banner h2{font-family:Georgia,'Times New Roman',serif;font-size:2.1rem;margin-bottom:14px;}
+  .cta-banner p{max-width:560px;margin:0 auto 28px;color:#ffe3ec;}
+  .cta-banner .btn-primary{background:#fff;color:var(--rose-dark);box-shadow:none;}
+
+  /* footer */
+  footer{background:#14231f;color:#cfd8d5;padding:60px 0 24px;}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:40px;}
+  .foot-grid h4{color:#fff;font-size:1rem;margin-bottom:16px;}
+  .foot-grid p, .foot-grid li{font-size:.88rem;color:#a9b5b1;margin-bottom:8px;}
+  .foot-grid ul{list-style:none;}
+  .foot-grid iframe{width:100%;height:150px;border:0;border-radius:8px;}
+  .foot-brand .name{font-family:Georgia,serif;color:#fff;font-size:1.3rem;margin-bottom:10px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.8rem;color:#8b9793;}
+  .foot-bottom strong{color:#e7b7c8;}
+
+  .badge-note{
+    position:fixed;bottom:16px;right:16px;background:#111;color:#fff;padding:10px 16px;
+    border-radius:8px;font-size:.75rem;z-index:200;box-shadow:0 6px 20px rgba(0,0,0,.3);opacity:.9;
+  }
+
+  @media (max-width:980px){
+    .offer-grid, .why-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid a:nth-child(1){grid-column:span 2;}
+  }
+  @media (max-width:720px){
+    nav.primary{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
+      background:var(--cream);flex-direction:column;justify-content:center;align-items:flex-start;
+      padding:40px;gap:26px;transform:translateX(100%);transition:transform .3s ease;box-shadow:-10px 0 30px rgba(0,0,0,.2);}
+    nav.primary.open{transform:translateX(0);}
+    nav.primary a{color:var(--ink) !important;text-shadow:none !important;font-size:1.1rem;}
+    .menu-toggle{display:block;}
+    .hero-content h1{font-size:2.3rem;}
+    .offer-grid, .why-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <div class="brand">
+      <span class="name">Stonehaven on Vaal</span>
+      <span class="tag">Just what the river needed</span>
+    </div>
+    <nav class="primary" id="primaryNav">
+      <a href="#home">Home</a>
+      <a href="#cruises">Boat Cruises</a>
+      <a href="#services">Our Services</a>
+      <a href="#events">Events</a>
+      <a href="#contact" class="cta-btn">Book Now</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-content">
+    <span class="eyebrow">Vanderbijlpark · Vaal River</span>
+    <h1>So Much To Do,<br>Right On The River</h1>
+    <p>Boat cruises, riverside dining and weddings with a view. Book your visit to Stonehaven on Vaal.</p>
+    <div class="hero-btns">
+      <a href="#cruises" class="btn btn-primary">View Boat Cruises</a>
+      <a href="#contact" class="btn btn-outline">Book a Table</a>
+    </div>
+  </div>
+</section>
+
+<div class="info-strip">
+  <div class="wrap">
+    <div class="item"><span class="icon">📍</span> Next to Baddrift Bridge, Vanderbijlpark</div>
+    <div class="item"><span class="icon">🕐</span> Open Daily 9:00AM – 5:00PM</div>
+    <div class="item"><span class="icon">📞</span> <a href="tel:0169822951">016 982 2951/2</a></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What We Offer</span>
+      <h2>So Much To Do</h2>
+      <p>Something for everyone and every occasion.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card" id="cruises">
+        <img src="https://stonehaven.co.za/wp-content/uploads/2024/11/MG_6894-scaled.jpg" alt="Boat cruise on the Vaal River">
+        <div class="body">
+          <h3>Boat Cruises</h3>
+          <p>Set sail on a scenic cruise and experience the beauty of the Vaal River like never before.</p>
+          <span class="more">Learn more →</span>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_7113-scaled.jpg" alt="Themed function decor">
+        <div class="body">
+          <h3>Themed Functions</h3>
+          <p>Casino nights, vintage soirées or tropical luaus, customised décor and catering for your event.</p>
+          <span class="more">Learn more →</span>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Garden-dining-4.jpg-300x225.jpg" alt="Restaurant dining area">
+        <div class="body">
+          <h3>Restaurant</h3>
+          <p>From hearty pub meals to gourmet dishes, in the wine cellar, river pub or garden terrace.</p>
+          <span class="more">Learn more →</span>
+        </div>
+      </div>
+      <div class="offer-card" id="events">
+        <img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Front-of-Stonehaven-and-roses-300x225.jpg" alt="Wedding venue gardens">
+        <div class="body">
+          <h3>Weddings</h3>
+          <p>Beautiful gardens, elegant décor and expert planning for your special day.</p>
+          <span class="more">Learn more →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Everything Taken Care Of</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ico">🏛️</div>
+        <h3>Multiple Venues</h3>
+        <p>Small and large function rooms, plus events on the water. Overnight accommodation for wedding couples.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">⚓</div>
+        <h3>SAMSA Certified</h3>
+        <p>Our fleet holds SAMSA (South African Maritime Safety Association) certification on every vessel.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">🚗</div>
+        <h3>Secure Parking</h3>
+        <p>Car guards keep your vehicle safe, and get it washed while you enjoy your day.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">🐾</div>
+        <h3>Family Friendly</h3>
+        <p>Slides, table tennis, a playhouse and lawn sports. Dogs are always welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">A Taste Of Stonehaven</span>
+      <h2>Lasting Memories For Your Special Moments</h2>
+    </div>
+    <div class="gallery-grid">
+      <a href="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_6988-2-scaled.jpg" target="_blank"><img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_6988-2-scaled.jpg" alt="Riverside view"></a>
+      <a href="https://stonehaven.co.za/wp-content/uploads/2024/11/MG_6894-scaled.jpg" target="_blank"><img src="https://stonehaven.co.za/wp-content/uploads/2024/11/MG_6894-scaled.jpg" alt="Boat cruise"></a>
+      <a href="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_5957-scaled.jpg" target="_blank"><img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_5957-scaled.jpg" alt="Event decor"></a>
+      <a href="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_6765-1-300x200.jpg" target="_blank"><img src="https://stonehaven.co.za/wp-content/uploads/2024/11/Copy-of-_MG_6765-1-300x200.jpg" alt="Function room"></a>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Guests Say</span>
+      <h2>Kind Words From The River</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"The most beautiful place you'll ever see... Stonehaven on Vaal is the perfect place to do so."</p>
+        <div class="who">Ruan Greef</div>
+        <div class="src">via Google</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Celebrated our engagement breakfast here with the most scenic river views. Unforgettable."</p>
+        <div class="who">Trish Branken</div>
+        <div class="src">via Facebook</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Food: 5/5. Service: 5/5. Atmosphere: 5/5."</p>
+        <div class="who">Cindy Van Rooi</div>
+        <div class="src">via Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner" id="contact">
+  <h2>Ready To Plan Your Visit?</h2>
+  <p>Let us guide you on how to make your event or special occasion effective and unique. Our team is ready to assist.</p>
+  <a href="tel:0169822951" class="btn btn-primary">Call 016 982 2951</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">Stonehaven on Vaal</div>
+        <p>Just what the river needed.</p>
+        <p>Next to Baddrift Bridge,<br>Vanderbijlpark, Gauteng</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: 016 982 2951/2</li>
+          <li>Email: info@stonehaven.co.za</li>
+          <li>Hours: Mon–Sun, 9AM–5PM</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#cruises">Boat Cruises</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#events">Events &amp; Weddings</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find Us</h4>
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Stonehaven+on+Vaal,+Vanderbijlpark&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Stonehaven on Vaal. All Rights Reserved. &nbsp;|&nbsp; <strong>Redesign concept</strong> prepared for review purposes.
+    </div>
+  </div>
+</footer>
+
+<div class="badge-note">Concept mockup, not the live site</div>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('primaryNav');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+
+</body>
+</html>
