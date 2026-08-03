@@ -10,10 +10,10 @@ export default function Demo() {
             <div className="media-frame">
               <img
                 src="/media/mobile-app-dashboard.jpeg"
-                alt="AethelHook Android app dashboard showing gateway status, Claude Code, Codex, and OpenCode toggles, and approval counts"
+                alt="AethelHook Android app dashboard showing gateway status and toggles for Claude Code, Codex, OpenCode, Gemini, Copilot, and Devin CLI, plus approval counts"
               />
             </div>
-            <p>The Dashboard tab: gateway status, per-IDE toggles, and a running approval count.</p>
+            <p>The Dashboard tab: gateway status, a toggle per agent, and a running approval count.</p>
           </div>
 
           <div className="demo-card">
