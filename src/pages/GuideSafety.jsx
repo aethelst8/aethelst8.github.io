@@ -116,10 +116,10 @@ export default function GuideSafety() {
 
           <h2>Where ÆthelHook fits</h2>
           <p>
-            ÆthelHook is a free, open source gateway that routes every Claude Code
-            and Codex tool call, plan review, and clarifying question to your phone
-            for a decision, over an end-to-end encrypted connection, with no cloud
-            relay in the middle. It does not replace the safeguards above, it adds
+            ÆthelHook is a free, open source gateway that routes every tool call,
+            plan review, and clarifying question, across six agents including
+            Claude Code and Codex, to your phone for a decision, over an end-to-end
+            encrypted connection, with no cloud relay in the middle. It does not replace the safeguards above, it adds
             the one thing they cannot: a decision made away from the screen you were
             already on autopilot with. The gate itself is guarded too, pairing a new
             phone requires Windows Hello on the PC, so the second device the decision
@@ -140,7 +140,7 @@ export default function GuideSafety() {
               </li>
               <li>
                 <a href="/guides/approve-claude-code-and-codex-from-your-phone/">
-                  How to approve Claude Code and Codex from your phone
+                  How to approve Claude Code, Codex, and four other AI agents from your phone
                 </a>
               </li>
             </ul>

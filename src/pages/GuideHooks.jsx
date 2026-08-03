@@ -152,9 +152,10 @@ export default function GuideHooks() {
           <h2>Where ÆthelHook fits</h2>
           <p>
             ÆthelHook is a working example of exactly this pattern: a{' '}
-            <code>PreToolUse</code> hook that forwards the tool call to a phone over
-            an encrypted connection, blocks, and returns whatever decision comes
-            back, for both Claude Code and Codex.
+            <code>PreToolUse</code>-equivalent hook that forwards the tool call to a
+            phone over an encrypted connection, blocks, and returns whatever decision
+            comes back, across six different coding agents including Claude Code and
+            Codex.
           </p>
           <p>
             <a href="/">See how it works and download it</a>.
@@ -170,7 +171,7 @@ export default function GuideHooks() {
               </li>
               <li>
                 <a href="/guides/approve-claude-code-and-codex-from-your-phone/">
-                  How to approve Claude Code and Codex from your phone
+                  How to approve Claude Code, Codex, and four other AI agents from your phone
                 </a>
               </li>
             </ul>

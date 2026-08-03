@@ -8,20 +8,21 @@ export default function GuideApprove() {
       <main>
         <article className="article">
           <p className="kicker">Guide</p>
-          <h1>How to approve Claude Code, Codex, and OpenCode from your phone</h1>
+          <h1>How to approve Claude Code, Codex, and four other AI agents from your phone</h1>
           <p className="article-lead">
             A step-by-step walkthrough of setting up remote control for Claude Code,
-            Codex, and OpenCode with ÆthelHook, so tool calls, plan reviews, and
-            questions can be answered from your phone instead of your IDE. Codex and
-            OpenCode each need one small extra step beyond the base install, covered
-            in full below.
+            Codex, OpenCode, Gemini CLI, GitHub Copilot CLI, and Devin CLI with
+            ÆthelHook, so tool calls, plan reviews, and questions can be answered from
+            your phone instead of your IDE. Most of these agents need one small extra
+            step beyond the base install, covered in full below.
           </p>
 
           <h2>What you need</h2>
           <ul>
             <li>
               A Windows PC running at least one of: Claude Code (CLI or VS Code
-              extension), Codex (CLI or IDE), or OpenCode.
+              extension), Codex (CLI or IDE), OpenCode, Gemini CLI, GitHub Copilot CLI,
+              or Devin's standalone terminal CLI.
             </li>
             <li>An Android phone.</li>
             <li>No account and no subscription, both installs are free.</li>
@@ -86,11 +87,11 @@ export default function GuideApprove() {
             tab.
           </p>
 
-          <h2>6. Extra step for Codex or OpenCode</h2>
+          <h2>6. Extra step for Codex, OpenCode, Gemini CLI, or Devin CLI</h2>
           <p>
-            Claude Code needs nothing beyond the steps above, its hooks are trusted
-            automatically. The other two agents each need one more small step
-            before ÆthelHook can see their tool calls.
+            Claude Code and GitHub Copilot CLI need nothing beyond the steps above,
+            their hooks are trusted automatically. The other four agents each need one
+            more small step before ÆthelHook can see their tool calls.
           </p>
 
           <h3>Codex: trust the hooks</h3>
@@ -132,10 +133,53 @@ export default function GuideApprove() {
             config folder to exist, not a specific install method.
           </p>
 
+          <h3>Gemini CLI: install with npm, then trust the folder</h3>
+          <p>
+            Install{' '}
+            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
+              Node.js
+            </a>{' '}
+            if you do not already have it, then run:
+          </p>
+          <pre>
+            <code>npm install -g @google/gemini-cli</code>
+          </pre>
+          <p>
+            Gemini CLI refuses to run tools, and refuses to fire any hook at all, in a
+            project folder it does not trust yet, a Gemini CLI safety feature, not
+            something ÆthelHook can skip on your behalf. The first time you run{' '}
+            <code>gemini</code> interactively in a project, accept its trust prompt if
+            one appears. Session Access, ÆthelHook's phone-to-PC prompt feature, trusts
+            the folder automatically before every headless run, so this step only
+            matters for using Gemini CLI yourself in your own terminal.
+          </p>
+
+          <h3>Devin CLI: the standalone terminal CLI, not the Devin IDE</h3>
+          <p>
+            This is Cognition's separate <code>devin</code> terminal CLI, not the Devin
+            IDE (a rebranded Windsurf editor). The IDE never fires hooks at all, so
+            ÆthelHook can only gate the standalone CLI. Install it on Windows with:
+          </p>
+          <pre>
+            <code>irm https://static.devin.ai/cli/setup.ps1 | iex</code>
+          </pre>
+          <p>
+            Then, in a real terminal window, since this step reads console input
+            directly and cannot be scripted or piped, sign in once:
+          </p>
+          <pre>
+            <code>{`devin auth login
+devin setup`}</code>
+          </pre>
+          <p>
+            After that one-time login, every <code>devin</code> tool call routes to
+            your phone the same as the other agents.
+          </p>
+
           <h2>7. You are done</h2>
           <p>
             From here, every tool call, plan review, and clarifying question from
-            whichever of the three agents you use routes to your phone. You can allow
+            whichever of the six agents you use routes to your phone. You can allow
             once, always allow for that project, always allow everywhere, deny, or
             deny with a reason fed back to the agent, all from the notification.
           </p>
@@ -144,7 +188,9 @@ export default function GuideApprove() {
             Session Access, ÆthelHook's other mode, works the other direction: send a
             prompt from your phone and kick off a headless run on your PC. Useful for
             a quick fix or a forgotten follow-up task while you are away from your
-            desk.
+            desk. It works for every agent except GitHub Copilot CLI, which is
+            approval-gate only, its headless auth needs Windows Credential Manager,
+            which the background service cannot reach.
           </div>
 
           <p>

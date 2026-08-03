@@ -47,7 +47,7 @@ const STEPS = [
   },
   {
     title: 'You are done',
-    body: 'From now on, tool calls, plan reviews, and clarifying questions from Claude Code, Codex, or OpenCode are routed to your phone for a decision.',
+    body: 'From now on, tool calls, plan reviews, and clarifying questions from whichever of the six supported agents you use are routed to your phone for a decision.',
   },
 ]
 
@@ -69,9 +69,10 @@ export default function Setup() {
           ))}
         </ol>
         <div className="warn warn-info requirements-note">
-          <strong>Codex and OpenCode each need one extra one-time step</strong>{' '}
-          beyond what is listed above, Codex needs its hooks trusted, and OpenCode
-          needs Node.js. See the{' '}
+          <strong>Most agents need one extra one-time step</strong>{' '}
+          beyond what is listed above: Claude Code needs nothing extra, but Codex needs
+          its hooks trusted, OpenCode and Gemini CLI need Node.js, and Devin CLI needs a
+          one-time interactive login in its standalone terminal CLI. See the{' '}
           <a href="/guides/approve-claude-code-and-codex-from-your-phone/">full setup guide</a>{' '}
           for exact instructions for each.
         </div>
