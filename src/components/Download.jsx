@@ -1,3 +1,5 @@
+import PlayStoreIcon from './PlayStoreIcon.jsx'
+
 export default function Download() {
   return (
     <section id="download">
@@ -35,6 +37,7 @@ export default function Download() {
               className="btn btn-primary"
               href="https://play.google.com/store/apps/details?id=com.aethelhook.app"
             >
+              <PlayStoreIcon size={18} />
               Get it on Google Play
             </a>
             <div className="warn warn-info">
