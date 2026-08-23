@@ -1,3 +1,6 @@
+import WindowsIcon from './WindowsIcon.jsx'
+import PlayStoreIcon from './PlayStoreIcon.jsx'
+
 export default function Hero() {
   return (
     <section className="hero" id="top">
@@ -12,7 +15,13 @@ export default function Hero() {
           You decide, not a popup you clicked past.
         </p>
         <div className="cta-row">
-          <a className="btn btn-primary" href="#download">Download ÆthelHook</a>
+          <a className="btn btn-primary btn-stacked" href="#download">
+            Download ÆthelHook
+            <span className="btn-icon-row">
+              <WindowsIcon size={18} />
+              <PlayStoreIcon size={18} />
+            </span>
+          </a>
         </div>
         <p className="fine-print">Windows PC and Android phone required. No account, no subscription.</p>
         <p className="fine-print">

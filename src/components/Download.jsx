@@ -1,4 +1,5 @@
 import PlayStoreIcon from './PlayStoreIcon.jsx'
+import WindowsIcon from './WindowsIcon.jsx'
 
 export default function Download() {
   return (
@@ -14,6 +15,7 @@ export default function Download() {
               className="btn btn-primary"
               href="https://github.com/aethelst8/aethelhook/releases/download/v1.0.0/AethelHook-Setup.exe"
             >
+              <WindowsIcon size={18} />
               Download for Windows
             </a>
             <div className="warn">

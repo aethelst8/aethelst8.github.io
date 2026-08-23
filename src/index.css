@@ -148,6 +148,15 @@ h1 {
 .btn-primary:hover {
   background: var(--accent-hover);
 }
+.btn-stacked {
+  flex-direction: column;
+  gap: 6px;
+}
+.btn-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .btn-secondary {
   background: transparent;
   border-color: var(--card-border);
