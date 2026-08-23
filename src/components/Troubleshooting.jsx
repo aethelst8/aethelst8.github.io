@@ -28,6 +28,7 @@ export default function Troubleshooting() {
         <h2>Troubleshooting</h2>
         <p className="section-lead">
           Four PowerShell commands to check and control the AethelHook service.
+          Also available with one-click copy from the Tray app's "PowerShell Commands" button.
         </p>
         <div className="cmd-grid">
           {COMMANDS.map((c) => (
