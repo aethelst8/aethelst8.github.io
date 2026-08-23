@@ -1,7 +1,7 @@
 const STEPS = [
   {
     title: 'Download the installer and the app',
-    body: 'Grab the Windows installer and the Android APK from the download section below.',
+    body: 'Grab the Windows installer and get the Android app from Google Play, both in the download section below.',
   },
   {
     title: 'Install Tailscale on both devices (optional, recommended)',
@@ -32,7 +32,7 @@ const STEPS = [
   },
   {
     title: 'Install the app on your phone',
-    body: 'Open the APK you downloaded. Android will warn that it is from an unknown source since it is not on the Play Store yet, allow the install and continue.',
+    body: 'Install ÆthelHook from Google Play like any other app.',
   },
   {
     title: 'Pair your phone with your PC',

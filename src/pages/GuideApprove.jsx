@@ -30,9 +30,13 @@ export default function GuideApprove() {
 
           <h2>1. Download the installer and the app</h2>
           <p>
-            Grab the Windows installer and the Android APK from the{' '}
-            <a href="/#download">download section</a> on the homepage. Both are also
-            available directly from the{' '}
+            Grab the Windows installer and the Android app from the{' '}
+            <a href="/#download">download section</a> on the homepage - the phone
+            app is on{' '}
+            <a href="https://play.google.com/store/apps/details?id=com.aethelhook.app">
+              Google Play
+            </a>
+            , and the Windows installer is on the{' '}
             <a href="https://github.com/aethelst8/aethelhook/releases">
               GitHub releases page
             </a>
@@ -50,9 +54,7 @@ export default function GuideApprove() {
 
           <h2>3. Install the app on your phone</h2>
           <p>
-            Open the APK you downloaded. Android will warn that it is from an
-            unknown source since it is not on the Play Store yet, allow the install
-            and continue.
+            Install ÆthelHook from Google Play like any other app, then open it.
           </p>
 
           <h2>4. Pair your phone with your PC</h2>

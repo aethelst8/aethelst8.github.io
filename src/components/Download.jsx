@@ -30,18 +30,21 @@ export default function Download() {
 
           <div className="dl-card">
             <h3>Android</h3>
-            <p className="dl-sub">Sideloaded APK, not on the Play Store yet.</p>
+            <p className="dl-sub">Now available on Google Play.</p>
             <a
               className="btn btn-primary"
-              href="https://github.com/aethelst8/aethelhook/releases/download/v1.3.0/aethelhook_v1.3.0.apk"
+              href="https://play.google.com/store/apps/details?id=com.aethelhook.app"
             >
-              Download for Android
+              Get it on Google Play
             </a>
-            <div className="warn">
-              <strong>Android will warn about an unknown source.</strong> That is
-              expected for an app that is not on the Play Store yet. Allow the
-              install to continue, then open the app and scan the pairing QR code
-              shown on your PC.
+            <div className="warn warn-info">
+              Install it like any other app, then open it and scan the pairing QR
+              code shown on your PC. Prefer a sideloaded APK instead? The signed
+              build is still posted on the{' '}
+              <a href="https://github.com/aethelst8/aethelhook/releases">
+                GitHub releases page
+              </a>
+              .
             </div>
           </div>
 
