@@ -13,7 +13,7 @@ export default function Download() {
             <p className="dl-sub">Installs the background service and the tray app.</p>
             <a
               className="btn btn-primary"
-              href="https://github.com/aethelst8/aethelhook/releases/download/v1.0.0/AethelHook-Setup.exe"
+              href="https://github.com/aethelst8/aethelhook/releases/download/v1.6/AethelHook-Setup.exe"
             >
               <WindowsIcon size={18} />
               Download for Windows
